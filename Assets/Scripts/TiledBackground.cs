@@ -2,10 +2,8 @@
 using System.Collections;
 
 public class TiledBackground : MonoBehaviour {
-
 	public int textureSize = 32;
 
-	// Use this for initialization
 	void Start () {
 		var newWidth = Mathf.Ceil (Screen.width / (textureSize * PixelPerfectCamera.scale));
 		var newHeight = Mathf.Ceil (Screen.height / (textureSize * PixelPerfectCamera.scale));
