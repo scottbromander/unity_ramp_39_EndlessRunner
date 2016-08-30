@@ -2,13 +2,11 @@
 using System.Collections;
 
 public class AnimatedTexture : MonoBehaviour {
-
 	public Vector2 speed = Vector2.zero;
 
 	private Vector2 offset = Vector2.zero;
 	private Material material;
 
-	// Use this for initialization
 	void Start () {
 		material = GetComponent<Renderer>().material;
 
