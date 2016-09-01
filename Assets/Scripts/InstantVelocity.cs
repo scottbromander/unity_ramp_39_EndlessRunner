@@ -12,6 +12,6 @@ public class InstantVelocity : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-
+		body2d.velocity = velocity;
 	}
 }
