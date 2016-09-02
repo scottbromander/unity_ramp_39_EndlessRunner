@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\AnimatedTexture.cs" />
      <Compile Include="Assets\Scripts\InstantVelocity.cs" />
      <Compile Include="Assets\Scripts\PixelPerfectCamera.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\TiledBackground.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
