@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour {
 
 		if (active) {
 			var newTransform = transform;
-			Instantiate (prefabs [Random.Range (0, prefabs.Length)], newTransform.position, Quaternion.identity);
+			GameObjectUtil.Instantiate (prefabs [Random.Range (0, prefabs.Length)], newTransform.position);
 			ResetDelay ();
 		}
 
