@@ -5,3 +5,5 @@ Topics covered:
 - Sprite / Asset Setup and Configuration
 - Object Creation
 - Object Pooling
+- Movement / Collision 
+- Dynamically created objects with Dynamic Property Sizing
