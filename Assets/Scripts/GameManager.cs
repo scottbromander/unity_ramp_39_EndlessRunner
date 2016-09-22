@@ -33,10 +33,21 @@ public class GameManager : MonoBehaviour {
 	
 	}
 
+	void OnPlayerKilled(){
+		spawner.active = false;
+
+		var playerDestoryScript = player.GetComponent<DestroyOffScreen> ();
+		playerDestoryScript.DestroyCallback -= OnPlayerKilled;
+
+		player.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+	}
+
 	void ResetGame(){
 		spawner.active = true;
 
 		player = GameObjectUtil.Instantiate(playerPrefab, new Vector3(0, (Screen.height / PixelPerfectCamera.pixelsToUnits) / 2, 0));
-			
+
+		var playerDestoryScript = player.GetComponent<DestroyOffScreen> ();
+		playerDestoryScript.DestroyCallback += OnPlayerKilled;
 	}
 }
