@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\RecycleGameObject.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\TiledBackground.cs" />
+     <Compile Include="Assets\Scripts\TimeManager.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
