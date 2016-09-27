@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\TiledBackground.cs" />
      <Compile Include="Assets\Scripts\TimeManager.cs" />
+     <None Include="Assets\Fonts\nokiafc22.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
