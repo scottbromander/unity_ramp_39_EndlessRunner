@@ -6,4 +6,5 @@ Topics covered:
 - Object Creation
 - Object Pooling
 - Movement / Collision 
-- Dynamically created objects with Dynamic Property Sizing
+- Dynamically creating objects with Dynamic Property Sizing
+- Time manipulation
