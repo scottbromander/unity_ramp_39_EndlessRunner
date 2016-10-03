@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour {
 	private GameObject player;
 	private GameObject floor;
 	private Spawner spawner;
+	private bool beatBestTime;
 
 	void Awake() {
 		floor = GameObject.Find ("Foreground");
@@ -41,6 +42,8 @@ public class GameManager : MonoBehaviour {
 		Time.timeScale = 0;
 
 		continueText.text = "PRESS ANY BUTTON TO START";
+
+		bestTime = PlayerPrefs.GetFloat ("BestTime");
 	}
 	
 	// Update is called once per frame
@@ -61,7 +64,9 @@ public class GameManager : MonoBehaviour {
 
 			continueText.canvasRenderer.SetAlpha (blink ? 0 : 1);
 
-			scoreText.text = "Time: " + FormatTime (timeElapsed) + "\nBEST: " + FormatTime (bestTime);
+			var textColor = beatBestTime ? "#FF0" : "#FFF";
+
+			scoreText.text = "Time: " + FormatTime (timeElapsed) + "\n<color=" + textColor + ">BEST: " + FormatTime (bestTime) + "</color>";
 		} else {
 			timeElapsed += Time.deltaTime;
 			scoreText.text = "Time: " + FormatTime (timeElapsed);
@@ -79,6 +84,12 @@ public class GameManager : MonoBehaviour {
 
 		gameStarted = false;
 		continueText.text = "PRESS ANY BUTTON TO RESTART";
+
+		if (timeElapsed > bestTime) {
+			bestTime = timeElapsed;
+			PlayerPrefs.SetFloat ("BestTime", bestTime);
+			beatBestTime = true;
+		}
 	}
 
 	void ResetGame(){
@@ -93,6 +104,7 @@ public class GameManager : MonoBehaviour {
 
 		continueText.canvasRenderer.SetAlpha (0);
 		timeElapsed = 0f;
+		beatBestTime = false;
 	}
 
 	string FormatTime(float value){
