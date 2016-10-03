@@ -8,3 +8,6 @@ Topics covered:
 - Movement / Collision 
 - Dynamically creating objects with Dynamic Property Sizing
 - Time manipulation
+- Basic UI implementation
+  - Canvas
+  - Text Effects
